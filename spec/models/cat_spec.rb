@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Cat, type: :model do
-  let!(:hoomin) { Hoomin.create(name: "foosef") }
-  let!(:dog) { Dog.create(name: "barkley", hoomin: hoomin) }
-  let!(:cat) { Cat.create(name: "cumbie", hoomin: hoomin) }
+  let!(:person) { Person.create(name: "foosef") }
+  let!(:dog) { Dog.create(name: "barkley", person: person) }
+  let!(:cat) { Cat.create(name: "cumbie", person: person) }
 
-  it "has hoomin" do
-    expect(cat.hoomin).to eq(hoomin)
+  it "has person" do
+    expect(cat.person).to eq(person)
   end
 
   it "has dog" do

@@ -1,4 +1,4 @@
 class Cat < ApplicationRecord
-  belongs_to :hoomin
-  has_one :dog, through: :hoomin, inverse_of: :cat
+  belongs_to :person
+  has_one :dog, through: :person, inverse_of: :cat
 end
