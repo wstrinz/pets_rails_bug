@@ -12,4 +12,8 @@ RSpec.describe Cat, type: :model do
   it "has dog" do
     expect(cat.dog).to eq(dog)
   end
+
+  it "can update dog name" do
+    cat.dog.update!(name: "fwuffy")
+  end
 end
